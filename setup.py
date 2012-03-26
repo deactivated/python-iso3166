@@ -7,13 +7,13 @@ except ImportError:
     use_setuptools()
     from setuptools import setup, find_packages
 
-    
+
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
 setup(name='iso3166',
-      version="0.1",
+      version="0.2",
       author="Mike Spindel",
       author_email="deactivated@gmail.com",
       license="MIT",
