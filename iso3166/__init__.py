@@ -264,15 +264,15 @@ _records = [
 
 
 def _build_index(idx):
-    return dict((r[idx], r) for r in _records)
+    return dict((r[idx].upper(), r) for r in _records)
 
 _by_alpha2 = _build_index(1)
 _by_alpha3 = _build_index(2)
 _by_numeric = _build_index(3)
-
+_by_name = _build_index(0)
 
 class _CountryLookup(object):
-    def get(self, key):
+    def __getitem__(self, key):
         if isinstance(key, Integral):
             return _by_numeric["%03d" % key]
 
@@ -283,8 +283,10 @@ class _CountryLookup(object):
             return _by_numeric[k]
         elif len(k) == 3:
             return _by_alpha3[k]
+        else:
+            return _by_name[k]
 
-        raise ValueError()
+    get = __getitem__
 
     def __iter__(self):
         return iter(_records)
