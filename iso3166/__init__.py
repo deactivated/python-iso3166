@@ -4,9 +4,13 @@ import re
 from numbers import Integral
 from collections import namedtuple
 
-
 __all__ = ["countries"]
 
+
+"""
+>>> from iso3166 import countries
+countries.get('')
+"""
 
 Country = namedtuple('Country', 'name, alpha2, alpha3, numeric')
 
@@ -264,6 +268,10 @@ _records = [
     Country(u"Zimbabwe", "ZW", "ZWE", "716")]
 
 
+_aliases = {
+    u"Ivory Coast" : u"Côte d'Ivoire"
+    }
+
 def _build_index(idx):
     return dict((r[idx].upper(), r) for r in _records)
 
@@ -271,8 +279,15 @@ _by_alpha2 = _build_index(1)
 _by_alpha3 = _build_index(2)
 _by_numeric = _build_index(3)
 _by_name = _build_index(0)
+_by_alias = {a.upper() : c for (a,c) in _aliases.items()}
 
 class _CountryLookup(object):
+
+    
+    def __init__(self, approx=False):
+            self.approx = approx
+
+
     def __getitem__(self, key):
         if isinstance(key, Integral):
             return _by_numeric["%03d" % key]
@@ -285,7 +300,18 @@ class _CountryLookup(object):
         elif len(k) == 3:
             return _by_alpha3[k]
         else:
-            return _by_name[k]
+            if not self.approx:
+                return _by_name[k]
+            else:
+                try:
+                    if k in _by_name:
+                        return _by_name[k]
+                    else:
+                        canonical = _by_alias[k]
+                        return _by_name[canonical.upper()]
+                except:
+                    raise
+                    raise ValueError('could not retrieve Country record for %s' % key.encode('utf-8'))
 
     get = __getitem__
 
@@ -293,3 +319,4 @@ class _CountryLookup(object):
         return iter(_records)
 
 countries = _CountryLookup()
+approx_countries = _CountryLookup(approx=True)
