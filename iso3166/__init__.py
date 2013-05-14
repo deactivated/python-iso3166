@@ -269,8 +269,24 @@ _records = [
 
 
 _aliases = {
-    u"Ivory Coast" : u"Côte d'Ivoire"
-    }
+    u"Ivory Coast": u"Côte d'Ivoire",
+    u"Federated States of Micronesia" : u"Micronesia, Federated States of",
+    u"British Virgin Islands": u"Virgin Islands, British", 
+    u"Macau": u"Macao", 
+    u"Saint Helena": u"Saint Helena, Ascension and Tristan da Cunha", 
+    u"Aland Islands": u"Åland Islands", 
+    u"Palestinian Territory": u"Palestinian Territory, Occupied", 
+    u"United States Virgin Islands": u"Virgin Islands, U.S.", 
+    u"Vietnam": u"Viet Nam", 
+    u"Reunion": u"Réunion", 
+    u"Macedonia": u"Macedonia, The Former Yugoslav Republic of",
+    u"Korea, Republic of (South Korea)": u"Korea, Republic of", 
+    u"Republic of Congo": u"Congo, Democratic Republic of the", 
+    u"Vatican City": u"Holy See (Vatican City State)", 
+    u"Taiwan": u"Taiwan, Province of China", 
+    u"Bolivia": u"Bolivia, Plurinational State of", 
+    u"Venezuela": u"Venezuela, Bolivarian Republic of"
+}
 
 def _build_index(idx):
     return dict((r[idx].upper(), r) for r in _records)
