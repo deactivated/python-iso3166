@@ -35,7 +35,7 @@ Usage
   Country(name=u'Albania', alpha2='AL', alpha3='ALB', numeric='008')
 
 or if you would like to use a table of other common names for lookup:
-
+::
   >>> from iso3166 import approx_countries as countries
   >>>
   >>> countries["Ivory Coast"]
