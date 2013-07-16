@@ -189,7 +189,7 @@ _records = [
     Country(u"Oman", "OM", "OMN", "512"),
     Country(u"Pakistan", "PK", "PAK", "586"),
     Country(u"Palau", "PW", "PLW", "585"),
-    Country(u"Palestinian Territory, Occupied", "PS", "PSE", "275"),
+    Country(u"Palestine, State of", "PS", "PSE", "275"),
     Country(u"Panama", "PA", "PAN", "591"),
     Country(u"Papua New Guinea", "PG", "PNG", "598"),
     Country(u"Paraguay", "PY", "PRY", "600"),
@@ -301,6 +301,7 @@ _by_alpha3 = _build_index(2)
 _by_numeric = _build_index(3)
 _by_name = _build_index(0)
 _by_alias = {a.upper() : c for (a,c) in _aliases.items()}
+
 
 class _CountryLookup(object):
 
