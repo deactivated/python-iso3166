@@ -1,0 +1,4 @@
+*.pyc
+build/
+dist/
+iso3166.egg-info/

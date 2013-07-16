@@ -4,7 +4,7 @@ python-iso3166 - Standalone ISO 3166-1 country definitions
 
 :Authors:
         Mike Spindel
-:Version: 0.2
+:Version: 0.31
 
 
 ISO 3166-1 defines two-letter, three-letter, and three-digit country
@@ -42,3 +42,13 @@ or if you would like to use a table of other common names for lookup:
       Country(name=u"C\xf4te d'Ivoire", alpha2='CI', alpha3='CIV', numeric='384')
   >>> countries[u"Côte d'Ivoire"]
       Country(name=u"C\xf4te d'Ivoire", alpha2='CI', alpha3='CIV', numeric='384')
+
+get local display name of a country
+::
+  >>> from iso3166 import countries
+  >>>
+  >>> us = countries.get('us')
+  >>> print us.local_name('zh_TW')
+  美國
+  >>> print us.local_name('ja_JP')
+  アメリカ合衆国

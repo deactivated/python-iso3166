@@ -12,7 +12,12 @@ __all__ = ["countries"]
 countries.get('')
 """
 
+def _import_locale(locale):
+    return __import__('iso3166.' + locale, {}, {}, ['iso3166'])
+
 Country = namedtuple('Country', 'name, alpha2, alpha3, numeric')
+Country.local_name = lambda self, locale: _import_locale(locale
+                                            ).names.get(self.alpha3, self.name)
 
 _records = [
     Country(u"Afghanistan", "AF", "AFG", "004"),
@@ -326,7 +331,6 @@ class _CountryLookup(object):
                         canonical = _by_alias[k]
                         return _by_name[canonical.upper()]
                 except:
-                    raise
                     raise ValueError('could not retrieve Country record for %s' % key.encode('utf-8'))
 
     get = __getitem__
