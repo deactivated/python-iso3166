@@ -304,7 +304,7 @@ _by_alpha2 = _build_index(1)
 _by_alpha3 = _build_index(2)
 _by_numeric = _build_index(3)
 _by_name = _build_index(0)
-_by_alias = {a.upper(): c for (a, c) in _aliases.items()}
+_by_alias = dict((a.upper(), c) for (a, c) in _aliases.items())
 
 
 class _CountryLookup(object):

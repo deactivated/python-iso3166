@@ -2,12 +2,13 @@
 Changes
 =======
 
-0.5 - September 5, 2013
+0.5.1 - September 5, 2013
 -----------------------
 
+* Make compatible with Python 2.6
 * Current through ISO newsletter VI-16 (2013‑07‑11)
 * Updated entries
-    - Palestine aliases
+    - Palestine, UAE aliases
 
 
 0.4 - February 14, 2013
