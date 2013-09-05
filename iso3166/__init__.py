@@ -287,6 +287,7 @@ _aliases = {
     u"Reunion": u"Réunion",
     u"Macedonia": u"Macedonia, The Former Yugoslav Republic of",
     u"Korea, Republic of (South Korea)": u"Korea, Republic of",
+    u"South Korea": u"Korea, Republic of",
     u"Republic of Congo": u"Congo, Democratic Republic of the",
     u"Vatican City": u"Holy See (Vatican City State)",
     u"Taiwan": u"Taiwan, Province of China",
