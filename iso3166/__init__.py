@@ -275,6 +275,7 @@ _records = [
 
 _aliases = {
     u"Ivory Coast": u"Côte d'Ivoire",
+    u"Cote D'Ivoire": u"Côte d'Ivoire",
     u"Federated States of Micronesia": u"Micronesia, Federated States of",
     u"British Virgin Islands": u"Virgin Islands, British",
     u"Macau": u"Macao",
