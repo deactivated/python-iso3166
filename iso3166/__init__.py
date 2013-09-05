@@ -317,7 +317,9 @@ class _CountryLookup(object):
             return _by_numeric["%03d" % key]
 
         k = key.upper()
-        if len(k) == 2:
+        if k=='UAE':
+            return _by_name[u"UNITED ARAB EMIRATES"]
+        elif len(k) == 2:
             return _by_alpha2[k]
         elif len(k) == 3 and re.match(r"[0-9]{3}", k):
             return _by_numeric[k]
