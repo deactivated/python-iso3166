@@ -6,18 +6,19 @@ from collections import namedtuple
 
 __all__ = ["countries"]
 
-
 """
 >>> from iso3166 import countries
 countries.get('')
 """
 
+
 def _import_locale(locale):
     return __import__('iso3166.' + locale, {}, {}, ['iso3166'])
 
+
 Country = namedtuple('Country', 'name, alpha2, alpha3, numeric')
 Country.local_name = lambda self, locale: _import_locale(locale
-                                            ).names.get(self.alpha3, self.name)
+).names.get(self.alpha3, self.name)
 
 _records = [
     Country(u"Afghanistan", "AF", "AFG", "004"),
@@ -272,42 +273,41 @@ _records = [
     Country(u"Zambia", "ZM", "ZMB", "894"),
     Country(u"Zimbabwe", "ZW", "ZWE", "716")]
 
-
 _aliases = {
     u"Ivory Coast": u"Côte d'Ivoire",
-    u"Federated States of Micronesia" : u"Micronesia, Federated States of",
-    u"British Virgin Islands": u"Virgin Islands, British", 
-    u"Macau": u"Macao", 
-    u"Saint Helena": u"Saint Helena, Ascension and Tristan da Cunha", 
-    u"Aland Islands": u"Åland Islands", 
-    u"Palestinian Territory": u"Palestinian Territory, Occupied", 
-    u"United States Virgin Islands": u"Virgin Islands, U.S.", 
-    u"Vietnam": u"Viet Nam", 
-    u"Reunion": u"Réunion", 
+    u"Federated States of Micronesia": u"Micronesia, Federated States of",
+    u"British Virgin Islands": u"Virgin Islands, British",
+    u"Macau": u"Macao",
+    u"Saint Helena": u"Saint Helena, Ascension and Tristan da Cunha",
+    u"Aland Islands": u"Åland Islands",
+    u"Palestinian Territory": u"Palestine, State of",
+    u"Occupied Palestinian Territory": u"Palestine, State of",
+    u"United States Virgin Islands": u"Virgin Islands, U.S.",
+    u"Vietnam": u"Viet Nam",
+    u"Reunion": u"Réunion",
     u"Macedonia": u"Macedonia, The Former Yugoslav Republic of",
-    u"Korea, Republic of (South Korea)": u"Korea, Republic of", 
-    u"Republic of Congo": u"Congo, Democratic Republic of the", 
-    u"Vatican City": u"Holy See (Vatican City State)", 
-    u"Taiwan": u"Taiwan, Province of China", 
-    u"Bolivia": u"Bolivia, Plurinational State of", 
-    u"Venezuela": u"Venezuela, Bolivarian Republic of"
+    u"Korea, Republic of (South Korea)": u"Korea, Republic of",
+    u"Republic of Congo": u"Congo, Democratic Republic of the",
+    u"Vatican City": u"Holy See (Vatican City State)",
+    u"Taiwan": u"Taiwan, Province of China",
+    u"Bolivia": u"Bolivia, Plurinational State of",
+    u"Venezuela": u"Venezuela, Bolivarian Republic of",
 }
 
 def _build_index(idx):
     return dict((r[idx].upper(), r) for r in _records)
 
+
 _by_alpha2 = _build_index(1)
 _by_alpha3 = _build_index(2)
 _by_numeric = _build_index(3)
 _by_name = _build_index(0)
-_by_alias = {a.upper() : c for (a,c) in _aliases.items()}
+_by_alias = {a.upper(): c for (a, c) in _aliases.items()}
 
 
 class _CountryLookup(object):
-
-    
     def __init__(self, approx=False):
-            self.approx = approx
+        self.approx = approx
 
 
     def __getitem__(self, key):
@@ -338,6 +338,7 @@ class _CountryLookup(object):
 
     def __iter__(self):
         return iter(_records)
+
 
 countries = _CountryLookup()
 approx_countries = _CountryLookup(approx=True)
