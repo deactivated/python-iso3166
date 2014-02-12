@@ -293,4 +293,11 @@ class _CountryLookup(object):
     def __iter__(self):
         return iter(_records)
 
+    def __contains__(self, item):
+        try:
+            self.get(item)
+            return True
+        except KeyError:
+            return False
+
 countries = _CountryLookup()
