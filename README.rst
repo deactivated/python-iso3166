@@ -4,7 +4,7 @@ python-iso3166 - Standalone ISO 3166-1 country definitions
 
 :Authors:
         Mike Spindel
-:Version: 0.2
+:Version: 0.5
 
 
 ISO 3166-1 defines two-letter, three-letter, and three-digit country
