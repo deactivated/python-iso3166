@@ -2,6 +2,13 @@
 Changes
 =======
 
+0.5 - February 13, 2014
+-----------------------
+
+* Added ``__contains__`` to CountryLookup (thanks tomako!)
+* Current through ISO newsletter VI-16
+    - No changes needed
+
 0.4 - February 14, 2013
 -----------------------
 

@@ -13,7 +13,7 @@ def read(fname):
 
 
 setup(name='iso3166',
-      version="0.4",
+      version="0.5",
       author="Mike Spindel",
       author_email="deactivated@gmail.com",
       license="MIT",
