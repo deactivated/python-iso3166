@@ -273,22 +273,31 @@ _by_numeric = _build_index(3)
 _by_name = _build_index(0)
 
 
+DEFAULT_SENTINEL = object()
+
+
 class _CountryLookup(object):
-    def __getitem__(self, key):
+
+    def get(self, key, default=DEFAULT_SENTINEL):
         if isinstance(key, Integral):
-            return _by_numeric["%03d" % key]
-
-        k = key.upper()
-        if len(k) == 2:
-            return _by_alpha2[k]
-        elif len(k) == 3 and re.match(r"[0-9]{3}", k):
-            return _by_numeric[k]
-        elif len(k) == 3:
-            return _by_alpha3[k]
+            r = _by_numeric.get("%03d" % key, default)
         else:
-            return _by_name[k]
+            k = key.upper()
+            if len(k) == 2:
+                r = _by_alpha2.get(k, default)
+            elif len(k) == 3 and re.match(r"[0-9]{3}", k):
+                r = _by_numeric.get(k, default)
+            elif len(k) == 3:
+                r = _by_alpha3.get(k, default)
+            else:
+                r = _by_name.get(k, default)
 
-    get = __getitem__
+        if r == DEFAULT_SENTINEL:
+            raise KeyError(key)
+
+        return r
+
+    __getitem__ = get
 
     def __iter__(self):
         return iter(_records)
