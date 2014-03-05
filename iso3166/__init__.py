@@ -273,12 +273,12 @@ _by_numeric = _build_index(3)
 _by_name = _build_index(0)
 
 
-DEFAULT_SENTINEL = object()
+NOT_FOUND = object()
 
 
 class _CountryLookup(object):
 
-    def get(self, key, default=DEFAULT_SENTINEL):
+    def get(self, key, default=NOT_FOUND):
         if isinstance(key, Integral):
             r = _by_numeric.get("%03d" % key, default)
         else:
@@ -292,7 +292,7 @@ class _CountryLookup(object):
             else:
                 r = _by_name.get(k, default)
 
-        if r == DEFAULT_SENTINEL:
+        if r == NOT_FOUND:
             raise KeyError(key)
 
         return r
