@@ -51,7 +51,7 @@ _records = [
     Country(u"Cambodia", "KH", "KHM", "116"),
     Country(u"Cameroon", "CM", "CMR", "120"),
     Country(u"Canada", "CA", "CAN", "124"),
-    Country(u"Cape Verde", "CV", "CPV", "132"),
+    Country(u"Cabo Verde", "CV", "CPV", "132"),
     Country(u"Cayman Islands", "KY", "CYM", "136"),
     Country(u"Central African Republic", "CF", "CAF", "140"),
     Country(u"Chad", "TD", "TCD", "148"),
