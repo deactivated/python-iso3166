@@ -23,6 +23,7 @@ Installation
 Usage
 =====
 
+
 Country details
 ------------------
 
@@ -37,8 +38,20 @@ Country details
   >>> countries.get(8)
   Country(name=u'Albania', alpha2='AL', alpha3='ALB', numeric='008')
 
+
 Countries lists
 ------------------
+
+::
+
+  >>> from iso3166 import countries
+
+  >>> for c in countries:
+         print c
+  >>> Country(name=u'Afghanistan', alpha2='AF', alpha3='AFG', numeric='004')
+  Country(name=u'\xc5land Islands', alpha2='AX', alpha3='ALA', numeric='248')
+  Country(name=u'Albania', alpha2='AL', alpha3='ALB', numeric='008')
+  Country(name=u'Algeria', alpha2='DZ', alpha3='DZA', numeric='012')
 
 ::
 
