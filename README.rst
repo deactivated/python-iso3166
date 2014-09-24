@@ -23,6 +23,10 @@ Installation
 Usage
 =====
 
+
+Country details
+------------------
+
 ::
 
   >>> from iso3166 import countries
@@ -33,3 +37,46 @@ Usage
   Country(name=u'\xc5land Islands', alpha2='AX', alpha3='ALA', numeric='248')
   >>> countries.get(8)
   Country(name=u'Albania', alpha2='AL', alpha3='ALB', numeric='008')
+
+
+Countries lists
+------------------
+
+::
+
+  >>> from iso3166 import countries
+
+  >>> for c in countries:
+         print c
+  >>> Country(name=u'Afghanistan', alpha2='AF', alpha3='AFG', numeric='004')
+  Country(name=u'\xc5land Islands', alpha2='AX', alpha3='ALA', numeric='248')
+  Country(name=u'Albania', alpha2='AL', alpha3='ALB', numeric='008')
+  Country(name=u'Algeria', alpha2='DZ', alpha3='DZA', numeric='012')
+
+::
+
+  >>> import iso3166
+
+  >>> iso3166._by_name
+  >>> {u'AFGHANISTAN': Country(name=u'Afghanistan', alpha2='AF', alpha3='AFG', numeric='004'),
+  u'ALBANIA': Country(name=u'Albania', alpha2='AL', alpha3='ALB', numeric='008'),
+  u'ALGERIA': Country(name=u'Algeria', alpha2='DZ', alpha3='DZA', numeric='012'),
+  ...
+
+  >>> iso3166._by_numeric
+  >>> {'004': Country(name=u'Afghanistan', alpha2='AF', alpha3='AFG', numeric='004'),
+  '008': Country(name=u'Albania', alpha2='AL', alpha3='ALB', numeric='008'),
+  '010': Country(name=u'Antarctica', alpha2='AQ', alpha3='ATA', numeric='010'),
+  ...
+
+  >>> iso3166._by_alpha2
+  >>> {'AD': Country(name=u'Andorra', alpha2='AD', alpha3='AND', numeric='020'),
+  'AE': Country(name=u'United Arab Emirates', alpha2='AE', alpha3='ARE', numeric='784'),
+  'AF': Country(name=u'Afghanistan', alpha2='AF', alpha3='AFG', numeric='004'),
+  ...
+
+  >>> iso3166._by_alpha3
+  >>> {'ABW': Country(name=u'Aruba', alpha2='AW', alpha3='ABW', numeric='533'),
+  'AFG': Country(name=u'Afghanistan', alpha2='AF', alpha3='AFG', numeric='004'),
+  'AGO': Country(name=u'Angola', alpha2='AO', alpha3='AGO', numeric='024'),
+  ...
