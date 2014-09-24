@@ -267,10 +267,19 @@ _records = [
 def _build_index(idx):
     return dict((r[idx].upper(), r) for r in _records)
 
+
+# Internal country indexes
 _by_alpha2 = _build_index(1)
 _by_alpha3 = _build_index(2)
 _by_numeric = _build_index(3)
 _by_name = _build_index(0)
+
+
+# Documented accessors for the country indexes
+countries_by_alpha2 = _by_alpha2
+countries_by_alpha3 = _by_alpha3
+countries_by_numeric = _by_numeric
+countries_by_name = _by_name
 
 
 NOT_FOUND = object()
