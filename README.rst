@@ -1,6 +1,6 @@
-==========================================================
-python-iso3166 - Standalone ISO 3166-1 country definitions
-==========================================================
+============================================================
+ python-iso3166 - Standalone ISO 3166-1 country definitions
+============================================================
 
 :Authors:
         Mike Spindel
@@ -25,7 +25,7 @@ Usage
 
 
 Country details
-------------------
+---------------
 
 ::
 
@@ -39,8 +39,8 @@ Country details
   Country(name=u'Albania', alpha2='AL', alpha3='ALB', numeric='008')
 
 
-Countries lists
-------------------
+Country lists and indexes
+-------------------------
 
 ::
 
