@@ -308,6 +308,9 @@ class _CountryLookup(object):
 
     __getitem__ = get
 
+    def __len__(self):
+        return len(_records)
+
     def __iter__(self):
         return iter(_records)
 

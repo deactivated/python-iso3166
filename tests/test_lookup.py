@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pytest
+import iso3166
 from iso3166 import countries
 
 
@@ -17,7 +18,11 @@ def check_lookup(alpha2, matching_keys, missing_keys):
         with pytest.raises(KeyError):
             countries[k]
 
-        assert countries.get(k, None) == None
+        assert countries.get(k, None) is None
+
+
+def test_length():
+    assert len(countries) == len(iso3166._records)
 
 
 def test_alpha2():
