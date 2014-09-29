@@ -2,6 +2,15 @@
 Changes
 =======
 
+0.6 - September 28, 2014
+------------------------
+
+* Updated entries
+   - Cabo Verde (changed in 2013-11)
+
+* Documented the dictionaries used for looking up countries by alpha2,
+  etc. (thanks brunetton!)
+
 0.5 - February 13, 2014
 -----------------------
 
