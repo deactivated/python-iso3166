@@ -4,9 +4,12 @@ import re
 from numbers import Integral
 from collections import namedtuple
 
-
 __all__ = ["countries"]
 
+try:
+    basestring
+except NameError:
+    basestring = str
 
 Country = namedtuple('Country', 'name, alpha2, alpha3, numeric')
 
