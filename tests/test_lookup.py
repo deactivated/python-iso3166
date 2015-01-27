@@ -25,6 +25,14 @@ def test_length():
     assert len(countries) == len(iso3166._records)
 
 
+def test_empty_string():
+    check_lookup("US", ["us", "US"], [""])
+
+
+def test_none():
+    check_lookup("US", ["us", "US"], [None])
+
+
 def test_alpha2():
     check_lookup("US", ["us", "US"], ["zz"])
 

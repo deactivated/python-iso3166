@@ -4,9 +4,12 @@ import re
 from numbers import Integral
 from collections import namedtuple
 
-
 __all__ = ["countries"]
 
+try:
+    basestring
+except NameError:
+    basestring = str
 
 Country = namedtuple('Country', 'name, alpha2, alpha3, numeric')
 
@@ -290,7 +293,7 @@ class _CountryLookup(object):
     def get(self, key, default=NOT_FOUND):
         if isinstance(key, Integral):
             r = _by_numeric.get("%03d" % key, default)
-        else:
+        elif isinstance(key, basestring):
             k = key.upper()
             if len(k) == 2:
                 r = _by_alpha2.get(k, default)
@@ -300,6 +303,8 @@ class _CountryLookup(object):
                 r = _by_alpha3.get(k, default)
             else:
                 r = _by_name.get(k, default)
+        else:
+            r = default
 
         if r == NOT_FOUND:
             raise KeyError(key)
