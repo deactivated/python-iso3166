@@ -49,6 +49,11 @@ def test_numeric():
     check_lookup("US", [840, "840"], [111, "111"])
 
 
+def test_alt_name():
+    check_lookup("TW", ["taiwan", "Taiwan, province of china"], ["zzzzz"])
+    check_lookup("PS", ["palestine", "palestine, state of"], ["zzzz"])
+
+
 def test_data():
     assert len(list(countries)) > 0
 
@@ -61,3 +66,6 @@ def test_data():
 
         assert len(country.numeric) == 3
         assert country.numeric == ("%03d" % int(country.numeric))
+
+        assert len(country.name) > 3
+        assert len(country.apolitical_name) > 3

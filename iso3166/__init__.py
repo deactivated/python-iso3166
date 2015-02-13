@@ -346,8 +346,10 @@ class _CountryLookup(object):
                 r = _by_numeric.get(k, default)
             elif len(k) == 3:
                 r = _by_alpha3.get(k, default)
-            else:
+            elif k in _by_name:
                 r = _by_name.get(k, default)
+            else:
+                r = _by_apolitical_name.get(k, default)
         else:
             r = default
 

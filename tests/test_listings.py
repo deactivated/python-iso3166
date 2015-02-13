@@ -16,6 +16,13 @@ def test_by_name():
     assert table["AFGHANISTAN"].name == "Afghanistan"
 
 
+def test_by_alt_name():
+    table = iso3166.countries_by_apolitical_name
+    assert len(table) >= len(iso3166.countries)
+    assert table["AFGHANISTAN"].name == "Afghanistan"
+    assert table["TAIWAN"].apolitical_name == "Taiwan"
+
+
 def test_by_number():
     table = iso3166.countries_by_numeric
     assert len(table) >= len(iso3166.countries)
