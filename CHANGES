@@ -2,6 +2,22 @@
 Changes
 =======
 
+0.7 - February 13, 2014
+-----------------------
+
+* Added new attribute ``apolitical_name`` to Country. This field
+  reflects the ISO short name but has unnecessarily inflammatory
+  modifiers removed.
+
+  Specifically: "Taiwan, Province of China" maps to "Taiwan" and
+  "Palestine, State of" maps to "Palestine."
+
+* Updated entries
+   - Holy See (changed in 2014-12)
+
+* CountryLookup now raises KeyError when passed an unknown integer
+  rather than AttributeError. (thanks unsignedint!)
+
 0.6 - September 28, 2014
 ------------------------
 
