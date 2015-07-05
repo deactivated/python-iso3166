@@ -1,0 +1,6 @@
+.tox
+bin/
+dist/
+incl/
+lib/
+pyvenv.cfg
