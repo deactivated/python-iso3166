@@ -1,0 +1,14 @@
+.DS_Store
+.*.swp
+*~
+
+*.pyc
+
+/dist/
+/build/
+*.egg-info
+.coverage
+/cover
+docs/_build/
+.tox/
+pyvenv.cfg
