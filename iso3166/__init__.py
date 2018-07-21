@@ -148,7 +148,7 @@ _records = [
     Country(u"Korea, Democratic People's Republic of", "KP", "PRK", "408",
             u"Korea, Democratic People's Republic of"),
     Country(u"Korea, Republic of", "KR", "KOR", "410", u"Korea, Republic of"),
-    Country(u"Kosovo", "XK", "XKX", "", u"Kosovo"),
+    Country(u"Kosovo", "XK", "XKX", "000", u"Kosovo"),
     Country(u"Kuwait", "KW", "KWT", "414", u"Kuwait"),
     Country(u"Kyrgyzstan", "KG", "KGZ", "417", u"Kyrgyzstan"),
     Country(u"Lao People's Democratic Republic", "LA", "LAO", "418",
@@ -346,7 +346,7 @@ class _CountryLookup(object):
             k = key.upper()
             if len(k) == 2:
                 r = _by_alpha2.get(k, default)
-            elif len(k) == 3 and re.match(r"[0-9]{3}", k):
+            elif len(k) == 3 and re.match(r"[0-9]{3}", k) and k != "000":
                 r = _by_numeric.get(k, default)
             elif len(k) == 3:
                 r = _by_alpha3.get(k, default)
