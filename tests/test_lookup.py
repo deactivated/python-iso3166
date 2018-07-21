@@ -42,11 +42,16 @@ def test_alpha3():
 
 
 def test_name():
-    check_lookup("US", ["united states", "United STates"], ["zzzzz"])
+    check_lookup("US",
+                 ["united states of america", "United STates of America"],
+                 ["zzzzz"])
 
 
 def test_numeric():
     check_lookup("US", [840, "840"], [111, "111"])
+
+    with pytest.raises(KeyError):
+        countries.get("000")
 
 
 def test_alt_name():
