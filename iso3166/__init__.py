@@ -263,7 +263,7 @@ _records = [
     Country(u"Suriname", "SR", "SUR", "740", u"Suriname"),
     Country(u"Svalbard and Jan Mayen", "SJ", "SJM", "744",
             u"Svalbard and Jan Mayen"),
-    Country(u"Swaziland", "SZ", "SWZ", "748", u"Swaziland"),
+    Country(u"Eswatini", "SZ", "SWZ", "748", u"Eswatini"),
     Country(u"Sweden", "SE", "SWE", "752", u"Sweden"),
     Country(u"Switzerland", "CH", "CHE", "756", u"Switzerland"),
     Country(u"Syrian Arab Republic", "SY", "SYR", "760",
