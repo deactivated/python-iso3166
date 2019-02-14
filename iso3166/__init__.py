@@ -377,4 +377,5 @@ class _CountryLookup(object):
         except KeyError:
             return False
 
+
 countries = _CountryLookup()
