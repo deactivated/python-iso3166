@@ -148,7 +148,7 @@ _records = [
     Country(u"Korea, Democratic People's Republic of", "KP", "PRK", "408",
             u"Korea, Democratic People's Republic of"),
     Country(u"Korea, Republic of", "KR", "KOR", "410", u"Korea, Republic of"),
-    Country(u"Kosovo", "XK", "XKX", "000", u"Kosovo"),
+    Country(u"Kosovo", "XK", "XKX", "983", u"Kosovo"),
     Country(u"Kuwait", "KW", "KWT", "414", u"Kuwait"),
     Country(u"Kyrgyzstan", "KG", "KGZ", "417", u"Kyrgyzstan"),
     Country(u"Lao People's Democratic Republic", "LA", "LAO", "418",
