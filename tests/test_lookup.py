@@ -71,6 +71,7 @@ def test_data():
 
         assert len(country.numeric) == 3
         assert country.numeric == ("%03d" % int(country.numeric))
+        assert int(country.numeric) > 0
 
         assert len(country.name) > 3
         assert len(country.apolitical_name) > 3
