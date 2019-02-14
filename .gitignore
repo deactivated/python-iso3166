@@ -12,3 +12,4 @@
 docs/_build/
 .tox/
 pyvenv.cfg
+.pytest_cache/
