@@ -13,7 +13,7 @@ def read(fname):
 
 
 setup(name='iso3166',
-      version="0.9",
+      version="1.0",
       author="Mike Spindel",
       author_email="mike@spindel.is",
       license="MIT",
@@ -33,4 +33,7 @@ setup(name='iso3166',
           "Programming Language :: Python :: 2.7",
           "Programming Language :: Python :: 3",
           "Programming Language :: Python :: 3.4",
+          "Programming Language :: Python :: 3.5",
+          "Programming Language :: Python :: 3.6",
+          "Programming Language :: Python :: 3.7",
       ])
