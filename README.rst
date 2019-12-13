@@ -4,7 +4,7 @@
 
 :Authors:
         Mike Spindel
-:Version: 1.0
+:Version: 1.0.1
 
 
 ISO 3166-1 defines two-letter, three-letter, and three-digit country
