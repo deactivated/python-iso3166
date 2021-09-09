@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 
 import re
-from numbers import Integral
-from typing import Dict, Iterator, NamedTuple, Optional, Union
+from typing import Dict, Iterator, NamedTuple, Type, TypeVar, Union, overload
 
 __all__ = ["countries"]
+
+StrOrInt = Union[str, int]
+_D = TypeVar("_D")
 
 
 class Country(NamedTuple):
@@ -391,12 +393,25 @@ countries_by_name = _by_name
 countries_by_apolitical_name = _by_apolitical_name
 
 
+class NotFound(object):
+    pass
+
+
 class _CountryLookup(object):
+    @overload
+    def get(self, key: StrOrInt) -> Country:
+        ...
+
+    @overload
+    def get(self, key: StrOrInt, default: _D) -> Union[Country, _D]:
+        ...
+
     def get(
-        self, key: Union[str, Integral], default: Optional[Country] = None
-    ) -> Country:
-        if isinstance(key, Integral):
-            r = _by_numeric.get("%03d" % key, default)
+        self, key: StrOrInt, default: Union[Type[NotFound], _D] = NotFound
+    ) -> Union[Country, _D]:
+        if isinstance(key, int):
+            k = f"{key:03d}"
+            r = _by_numeric.get(k, default)
 
         else:
             k = key.upper()
@@ -411,7 +426,7 @@ class _CountryLookup(object):
             else:
                 r = _by_apolitical_name.get(k, default)
 
-        if not r:
+        if r == NotFound:
             raise KeyError(key)
 
         return r
@@ -424,7 +439,7 @@ class _CountryLookup(object):
     def __iter__(self) -> Iterator[Country]:
         return iter(_records)
 
-    def __contains__(self, item: Union[str, Integral]) -> bool:
+    def __contains__(self, item: StrOrInt) -> bool:
         try:
             self.get(item)
             return True
