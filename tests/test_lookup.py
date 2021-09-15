@@ -44,7 +44,9 @@ def test_alpha3() -> None:
 
 def test_name() -> None:
     check_lookup(
-        "US", ["united states of america", "United STates of America"], ["zzzzz"]
+        "US",
+        ["united states of america", "United STates of America"],
+        ["zzzzz"],
     )
 
 

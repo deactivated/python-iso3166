@@ -58,7 +58,9 @@ _records = [
         "535",
         "Bonaire, Sint Eustatius and Saba",
     ),
-    Country("Bosnia and Herzegovina", "BA", "BIH", "070", "Bosnia and Herzegovina"),
+    Country(
+        "Bosnia and Herzegovina", "BA", "BIH", "070", "Bosnia and Herzegovina"
+    ),
     Country("Botswana", "BW", "BWA", "072", "Botswana"),
     Country("Bouvet Island", "BV", "BVT", "074", "Bouvet Island"),
     Country("Brazil", "BR", "BRA", "076", "Brazil"),
@@ -78,12 +80,24 @@ _records = [
     Country("Canada", "CA", "CAN", "124", "Canada"),
     Country("Cabo Verde", "CV", "CPV", "132", "Cabo Verde"),
     Country("Cayman Islands", "KY", "CYM", "136", "Cayman Islands"),
-    Country("Central African Republic", "CF", "CAF", "140", "Central African Republic"),
+    Country(
+        "Central African Republic",
+        "CF",
+        "CAF",
+        "140",
+        "Central African Republic",
+    ),
     Country("Chad", "TD", "TCD", "148", "Chad"),
     Country("Chile", "CL", "CHL", "152", "Chile"),
     Country("China", "CN", "CHN", "156", "China"),
     Country("Christmas Island", "CX", "CXR", "162", "Christmas Island"),
-    Country("Cocos (Keeling) Islands", "CC", "CCK", "166", "Cocos (Keeling) Islands"),
+    Country(
+        "Cocos (Keeling) Islands",
+        "CC",
+        "CCK",
+        "166",
+        "Cocos (Keeling) Islands",
+    ),
     Country("Colombia", "CO", "COL", "170", "Colombia"),
     Country("Comoros", "KM", "COM", "174", "Comoros"),
     Country("Congo", "CG", "COG", "178", "Congo"),
@@ -114,7 +128,11 @@ _records = [
     Country("Estonia", "EE", "EST", "233", "Estonia"),
     Country("Ethiopia", "ET", "ETH", "231", "Ethiopia"),
     Country(
-        "Falkland Islands (Malvinas)", "FK", "FLK", "238", "Falkland Islands (Malvinas)"
+        "Falkland Islands (Malvinas)",
+        "FK",
+        "FLK",
+        "238",
+        "Falkland Islands (Malvinas)",
     ),
     Country("Faroe Islands", "FO", "FRO", "234", "Faroe Islands"),
     Country("Fiji", "FJ", "FJI", "242", "Fiji"),
@@ -123,7 +141,11 @@ _records = [
     Country("French Guiana", "GF", "GUF", "254", "French Guiana"),
     Country("French Polynesia", "PF", "PYF", "258", "French Polynesia"),
     Country(
-        "French Southern Territories", "TF", "ATF", "260", "French Southern Territories"
+        "French Southern Territories",
+        "TF",
+        "ATF",
+        "260",
+        "French Southern Territories",
     ),
     Country("Gabon", "GA", "GAB", "266", "Gabon"),
     Country("Gambia", "GM", "GMB", "270", "Gambia"),
@@ -157,7 +179,11 @@ _records = [
     Country("India", "IN", "IND", "356", "India"),
     Country("Indonesia", "ID", "IDN", "360", "Indonesia"),
     Country(
-        "Iran, Islamic Republic of", "IR", "IRN", "364", "Iran, Islamic Republic of"
+        "Iran, Islamic Republic of",
+        "IR",
+        "IRN",
+        "364",
+        "Iran, Islamic Republic of",
     ),
     Country("Iraq", "IQ", "IRQ", "368", "Iraq"),
     Country("Ireland", "IE", "IRL", "372", "Ireland"),
@@ -218,7 +244,9 @@ _records = [
         "583",
         "Micronesia, Federated States of",
     ),
-    Country("Moldova, Republic of", "MD", "MDA", "498", "Moldova, Republic of"),
+    Country(
+        "Moldova, Republic of", "MD", "MDA", "498", "Moldova, Republic of"
+    ),
     Country("Monaco", "MC", "MCO", "492", "Monaco"),
     Country("Mongolia", "MN", "MNG", "496", "Mongolia"),
     Country("Montenegro", "ME", "MNE", "499", "Montenegro"),
@@ -237,7 +265,13 @@ _records = [
     Country("Nigeria", "NG", "NGA", "566", "Nigeria"),
     Country("Niue", "NU", "NIU", "570", "Niue"),
     Country("Norfolk Island", "NF", "NFK", "574", "Norfolk Island"),
-    Country("Northern Mariana Islands", "MP", "MNP", "580", "Northern Mariana Islands"),
+    Country(
+        "Northern Mariana Islands",
+        "MP",
+        "MNP",
+        "580",
+        "Northern Mariana Islands",
+    ),
     Country("Norway", "NO", "NOR", "578", "Norway"),
     Country("Oman", "OM", "OMN", "512", "Oman"),
     Country("Pakistan", "PK", "PAK", "586", "Pakistan"),
@@ -265,13 +299,23 @@ _records = [
         "654",
         "Saint Helena, Ascension and Tristan da Cunha",
     ),
-    Country("Saint Kitts and Nevis", "KN", "KNA", "659", "Saint Kitts and Nevis"),
+    Country(
+        "Saint Kitts and Nevis", "KN", "KNA", "659", "Saint Kitts and Nevis"
+    ),
     Country("Saint Lucia", "LC", "LCA", "662", "Saint Lucia"),
     Country(
-        "Saint Martin (French part)", "MF", "MAF", "663", "Saint Martin (French part)"
+        "Saint Martin (French part)",
+        "MF",
+        "MAF",
+        "663",
+        "Saint Martin (French part)",
     ),
     Country(
-        "Saint Pierre and Miquelon", "PM", "SPM", "666", "Saint Pierre and Miquelon"
+        "Saint Pierre and Miquelon",
+        "PM",
+        "SPM",
+        "666",
+        "Saint Pierre and Miquelon",
     ),
     Country(
         "Saint Vincent and the Grenadines",
@@ -282,7 +326,9 @@ _records = [
     ),
     Country("Samoa", "WS", "WSM", "882", "Samoa"),
     Country("San Marino", "SM", "SMR", "674", "San Marino"),
-    Country("Sao Tome and Principe", "ST", "STP", "678", "Sao Tome and Principe"),
+    Country(
+        "Sao Tome and Principe", "ST", "STP", "678", "Sao Tome and Principe"
+    ),
     Country("Saudi Arabia", "SA", "SAU", "682", "Saudi Arabia"),
     Country("Senegal", "SN", "SEN", "686", "Senegal"),
     Country("Serbia", "RS", "SRB", "688", "Serbia"),
@@ -290,7 +336,11 @@ _records = [
     Country("Sierra Leone", "SL", "SLE", "694", "Sierra Leone"),
     Country("Singapore", "SG", "SGP", "702", "Singapore"),
     Country(
-        "Sint Maarten (Dutch part)", "SX", "SXM", "534", "Sint Maarten (Dutch part)"
+        "Sint Maarten (Dutch part)",
+        "SX",
+        "SXM",
+        "534",
+        "Sint Maarten (Dutch part)",
     ),
     Country("Slovakia", "SK", "SVK", "703", "Slovakia"),
     Country("Slovenia", "SI", "SVN", "705", "Slovenia"),
@@ -309,11 +359,15 @@ _records = [
     Country("Sri Lanka", "LK", "LKA", "144", "Sri Lanka"),
     Country("Sudan", "SD", "SDN", "729", "Sudan"),
     Country("Suriname", "SR", "SUR", "740", "Suriname"),
-    Country("Svalbard and Jan Mayen", "SJ", "SJM", "744", "Svalbard and Jan Mayen"),
+    Country(
+        "Svalbard and Jan Mayen", "SJ", "SJM", "744", "Svalbard and Jan Mayen"
+    ),
     Country("Eswatini", "SZ", "SWZ", "748", "Eswatini"),
     Country("Sweden", "SE", "SWE", "752", "Sweden"),
     Country("Switzerland", "CH", "CHE", "756", "Switzerland"),
-    Country("Syrian Arab Republic", "SY", "SYR", "760", "Syrian Arab Republic"),
+    Country(
+        "Syrian Arab Republic", "SY", "SYR", "760", "Syrian Arab Republic"
+    ),
     Country("Taiwan, Province of China", "TW", "TWN", "158", "Taiwan"),
     Country("Tajikistan", "TJ", "TJK", "762", "Tajikistan"),
     Country(
@@ -332,11 +386,19 @@ _records = [
     Country("Tunisia", "TN", "TUN", "788", "Tunisia"),
     Country("Turkey", "TR", "TUR", "792", "Turkey"),
     Country("Turkmenistan", "TM", "TKM", "795", "Turkmenistan"),
-    Country("Turks and Caicos Islands", "TC", "TCA", "796", "Turks and Caicos Islands"),
+    Country(
+        "Turks and Caicos Islands",
+        "TC",
+        "TCA",
+        "796",
+        "Turks and Caicos Islands",
+    ),
     Country("Tuvalu", "TV", "TUV", "798", "Tuvalu"),
     Country("Uganda", "UG", "UGA", "800", "Uganda"),
     Country("Ukraine", "UA", "UKR", "804", "Ukraine"),
-    Country("United Arab Emirates", "AE", "ARE", "784", "United Arab Emirates"),
+    Country(
+        "United Arab Emirates", "AE", "ARE", "784", "United Arab Emirates"
+    ),
     Country(
         "United Kingdom of Great Britain and Northern Ireland",
         "GB",
@@ -344,7 +406,13 @@ _records = [
         "826",
         "United Kingdom of Great Britain and Northern Ireland",
     ),
-    Country("United States of America", "US", "USA", "840", "United States of America"),
+    Country(
+        "United States of America",
+        "US",
+        "USA",
+        "840",
+        "United States of America",
+    ),
     Country(
         "United States Minor Outlying Islands",
         "UM",
@@ -363,8 +431,16 @@ _records = [
         "Venezuela, Bolivarian Republic of",
     ),
     Country("Viet Nam", "VN", "VNM", "704", "Viet Nam"),
-    Country("Virgin Islands, British", "VG", "VGB", "092", "Virgin Islands, British"),
-    Country("Virgin Islands, U.S.", "VI", "VIR", "850", "Virgin Islands, U.S."),
+    Country(
+        "Virgin Islands, British",
+        "VG",
+        "VGB",
+        "092",
+        "Virgin Islands, British",
+    ),
+    Country(
+        "Virgin Islands, U.S.", "VI", "VIR", "850", "Virgin Islands, U.S."
+    ),
     Country("Wallis and Futuna", "WF", "WLF", "876", "Wallis and Futuna"),
     Country("Western Sahara", "EH", "ESH", "732", "Western Sahara"),
     Country("Yemen", "YE", "YEM", "887", "Yemen"),
