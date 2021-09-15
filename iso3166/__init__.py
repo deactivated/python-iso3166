@@ -469,11 +469,11 @@ countries_by_name = _by_name
 countries_by_apolitical_name = _by_apolitical_name
 
 
-class NotFound(object):
+class NotFound:
     pass
 
 
-class _CountryLookup(object):
+class _CountryLookup:
     @overload
     def get(self, key: StrOrInt) -> Country:
         ...
@@ -488,7 +488,6 @@ class _CountryLookup(object):
         if isinstance(key, int):
             k = f"{key:03d}"
             r = _by_numeric.get(k, default)
-
         else:
             k = key.upper()
             if len(k) == 2:
