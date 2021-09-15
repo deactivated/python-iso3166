@@ -32,11 +32,11 @@ Country details
   >>> from iso3166 import countries
   >>>
   >>> countries.get('us')
-  Country(name=u'United States', alpha2='US', alpha3='USA', numeric='840')
+  Country(name='United States', alpha2='US', alpha3='USA', numeric='840')
   >>> countries.get('ala')
-  Country(name=u'\xc5land Islands', alpha2='AX', alpha3='ALA', numeric='248')
+  Country(name='Åland Islands', alpha2='AX', alpha3='ALA', numeric='248')
   >>> countries.get(8)
-  Country(name=u'Albania', alpha2='AL', alpha3='ALB', numeric='008')
+  Country(name='Albania', alpha2='AL', alpha3='ALB', numeric='008')
 
 
 Country lists and indexes
@@ -48,7 +48,7 @@ Country lists and indexes
 
   >>> for c in countries:
          print(c)
-  >>> Country(name=u'Afghanistan', alpha2='AF', alpha3='AFG', numeric='004')
+  >>> Country(name='Afghanistan', alpha2='AF', alpha3='AFG', numeric='004')
   Country(name='Åland Islands', alpha2='AX', alpha3='ALA', numeric='248')
   Country(name='Albania', alpha2='AL', alpha3='ALB', numeric='008')
   Country(name='Algeria', alpha2='DZ', alpha3='DZA', numeric='012')
@@ -58,9 +58,9 @@ Country lists and indexes
   >>> import iso3166
 
   >>> iso3166.countries_by_name
-  >>> {'AFGHANISTAN': Country(name=u'Afghanistan', alpha2='AF', alpha3='AFG', numeric='004'),
-  'ALBANIA': Country(name=u'Albania', alpha2='AL', alpha3='ALB', numeric='008'),
-  'ALGERIA': Country(name=u'Algeria', alpha2='DZ', alpha3='DZA', numeric='012'),
+  >>> {'AFGHANISTAN': Country(name='Afghanistan', alpha2='AF', alpha3='AFG', numeric='004'),
+  'ALBANIA': Country(name='Albania', alpha2='AL', alpha3='ALB', numeric='008'),
+  'ALGERIA': Country(name='Algeria', alpha2='DZ', alpha3='DZA', numeric='012'),
   ...
 
   >>> iso3166.countries_by_numeric
