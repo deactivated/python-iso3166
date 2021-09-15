@@ -1,12 +1,6 @@
 import os.path
 
-try:
-    from setuptools import setup, find_packages
-except ImportError:
-    from ez_setup import use_setuptools
-
-    use_setuptools()
-    from setuptools import setup, find_packages
+from setuptools import setup, find_packages
 
 
 def read(fname):
@@ -22,7 +16,7 @@ setup(
     keywords="iso 3166-1 country codes",
     url="http://github.com/deactivated/python-iso3166",
     description="Self-contained ISO 3166-1 country definitions.",
-    packages=find_packages(exclude=["ez_setup"]),
+    packages=find_packages(),
     long_description=read("README.rst"),
     zip_safe=False,
     classifiers=[
