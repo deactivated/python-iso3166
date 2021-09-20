@@ -2,6 +2,11 @@
 Changes
 =======
 
+2.0.2 - Sep 20, 2021
+--------------------
+
+* Add the ``py.typed`` marker file in accordance with PEP 561
+
 2.0.1 - Sep 14, 2021
 --------------------
 

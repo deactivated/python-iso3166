@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name="iso3166",
-    version="2.0.1",
+    version="2.0.2",
     author="Mike Spindel",
     author_email="mike@spindel.is",
     license="MIT",
@@ -17,8 +17,8 @@ setup(
     url="http://github.com/deactivated/python-iso3166",
     description="Self-contained ISO 3166-1 country definitions.",
     packages=find_packages(),
-    package_data = {
-        'iso3166': [ 'py.typed' ],
+    package_data={
+        "iso3166": ["py.typed"],
     },
     long_description=read("README.rst"),
     zip_safe=False,
