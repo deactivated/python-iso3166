@@ -17,6 +17,9 @@ setup(
     url="http://github.com/deactivated/python-iso3166",
     description="Self-contained ISO 3166-1 country definitions.",
     packages=find_packages(),
+    package_data = {
+        'iso3166': [ 'py.typed' ],
+    },
     long_description=read("README.rst"),
     zip_safe=False,
     python_requires=">= 3.6",
