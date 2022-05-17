@@ -15,6 +15,9 @@ setup(
     license="MIT",
     keywords="iso 3166-1 country codes",
     url="http://github.com/deactivated/python-iso3166",
+    project_urls={
+        "Changelog": "https://github.com/deactivated/python-iso3166/blob/master/CHANGES",
+    },
     description="Self-contained ISO 3166-1 country definitions.",
     packages=find_packages(),
     package_data={
