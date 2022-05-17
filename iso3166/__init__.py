@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import re
 from typing import Dict, Iterator, NamedTuple, Type, TypeVar, Union, overload
 
