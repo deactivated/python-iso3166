@@ -384,7 +384,7 @@ _records = [
     Country("Tonga", "TO", "TON", "776", "Tonga"),
     Country("Trinidad and Tobago", "TT", "TTO", "780", "Trinidad and Tobago"),
     Country("Tunisia", "TN", "TUN", "788", "Tunisia"),
-    Country("Turkey", "TR", "TUR", "792", "Turkey"),
+    Country("Türkiye", "TR", "TUR", "792", "Türkiye"),
     Country("Turkmenistan", "TM", "TKM", "795", "Turkmenistan"),
     Country(
         "Turks and Caicos Islands",
