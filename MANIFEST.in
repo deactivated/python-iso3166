@@ -2,3 +2,4 @@ include LICENSE.txt
 include README.rst
 include CHANGES
 recursive-include tests *.py
+recursive-include src py.typed
