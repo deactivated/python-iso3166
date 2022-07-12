@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name="iso3166",
-    version="2.0.2",
+    version="2.1.0",
     author="Mike Spindel",
     author_email="mike@spindel.is",
     license="MIT",
