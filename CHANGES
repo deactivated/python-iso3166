@@ -1,6 +1,11 @@
-=======
 Changes
 =======
+
+2.1.1 - July 11, 2022
+---------------------
+
+* Move install metadata from ``setup.py`` to ``setup.cfg``
+* Add py.typed to source distribution
 
 2.1.0 - July 11, 2022
 ---------------------
