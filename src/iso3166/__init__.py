@@ -30,6 +30,7 @@ _records = [
     Country("Antigua and Barbuda", "AG", "ATG", "028", "Antigua and Barbuda"),
     Country("Argentina", "AR", "ARG", "032", "Argentina"),
     Country("Armenia", "AM", "ARM", "051", "Armenia"),
+    Country("Ascension Island", "AC", "ASC", "", "Ascension Island"), #exceptional reservation
     Country("Aruba", "AW", "ABW", "533", "Aruba"),
     Country("Australia", "AU", "AUS", "036", "Australia"),
     Country("Austria", "AT", "AUT", "040", "Austria"),
@@ -74,6 +75,7 @@ _records = [
     Country("Brunei Darussalam", "BN", "BRN", "096", "Brunei Darussalam"),
     Country("Bulgaria", "BG", "BGR", "100", "Bulgaria"),
     Country("Burkina Faso", "BF", "BFA", "854", "Burkina Faso"),
+    Country("Burma", "BU", "", "104", "Myanmar"), #transitional reservations
     Country("Burundi", "BI", "BDI", "108", "Burundi"),
     Country("Cambodia", "KH", "KHM", "116", "Cambodia"),
     Country("Cameroon", "CM", "CMR", "120", "Cameroon"),
@@ -127,6 +129,8 @@ _records = [
     Country("Eritrea", "ER", "ERI", "232", "Eritrea"),
     Country("Estonia", "EE", "EST", "233", "Estonia"),
     Country("Ethiopia", "ET", "ETH", "231", "Ethiopia"),
+    Country("European Union", "EU", "", "", "European Union"), #exceptional reservation
+    Country("Eurozone", "EZ", "", "", "Eurozone"), #exceptional reservation
     Country(
         "Falkland Islands (Malvinas)",
         "FK",
@@ -138,6 +142,7 @@ _records = [
     Country("Fiji", "FJ", "FJI", "242", "Fiji"),
     Country("Finland", "FI", "FIN", "246", "Finland"),
     Country("France", "FR", "FRA", "250", "France"),
+    Country("France, Metropolitan", "FX", "", "", "France, Metropolitan"), #exceptional reservations
     Country("French Guiana", "GF", "GUF", "254", "French Guiana"),
     Country("French Polynesia", "PF", "PYF", "258", "French Polynesia"),
     Country(
@@ -187,6 +192,7 @@ _records = [
     ),
     Country("Iraq", "IQ", "IRQ", "368", "Iraq"),
     Country("Ireland", "IE", "IRL", "372", "Ireland"),
+    Country("Island of Sark", "CQ", "CRQ", "680", "Island of Sark"), #exceptional reservation 
     Country("Isle of Man", "IM", "IMN", "833", "Isle of Man"),
     Country("Israel", "IL", "ISR", "376", "Israel"),
     Country("Italy", "IT", "ITA", "380", "Italy"),
@@ -258,6 +264,8 @@ _records = [
     Country("Nauru", "NR", "NRU", "520", "Nauru"),
     Country("Nepal", "NP", "NPL", "524", "Nepal"),
     Country("Netherlands", "NL", "NLD", "528", "Netherlands"),
+    Country("Netherlands Antilles", "AN", "ANT", "530", "Netherlands Antilles"), #transitional reservations
+    Country("Neutral Zone", "NT", "NTZ", "536", "Neutral Zone"), #transitional reservations
     Country("New Caledonia", "NC", "NCL", "540", "New Caledonia"),
     Country("New Zealand", "NZ", "NZL", "554", "New Zealand"),
     Country("Nicaragua", "NI", "NIC", "558", "Nicaragua"),
@@ -383,6 +391,7 @@ _records = [
     Country("Tokelau", "TK", "TKL", "772", "Tokelau"),
     Country("Tonga", "TO", "TON", "776", "Tonga"),
     Country("Trinidad and Tobago", "TT", "TTO", "780", "Trinidad and Tobago"),
+    Country("Tristan da Cunha", "TA", "TAA", "", "Tristan da Cunha",), #exceptional reservation
     Country("Tunisia", "TN", "TUN", "788", "Tunisia"),
     Country("Türkiye", "TR", "TUR", "792", "Türkiye"),
     Country("Turkmenistan", "TM", "TKM", "795", "Turkmenistan"),
@@ -406,6 +415,12 @@ _records = [
         "826",
         "United Kingdom of Great Britain and Northern Ireland",
     ),
+    Country("United Nations", #exceptional reservation
+        "UN", 
+        "", 
+        "", 
+        "United Nations"
+    ),
     Country(
         "United States of America",
         "US",
@@ -421,6 +436,7 @@ _records = [
         "United States Minor Outlying Islands",
     ),
     Country("Uruguay", "UY", "URY", "858", "Uruguay"),
+    Country("USSR", "SU", "SUN", "810", "USSR"), #exceptional reservation
     Country("Uzbekistan", "UZ", "UZB", "860", "Uzbekistan"),
     Country("Vanuatu", "VU", "VUT", "548", "Vanuatu"),
     Country(
@@ -444,6 +460,8 @@ _records = [
     Country("Wallis and Futuna", "WF", "WLF", "876", "Wallis and Futuna"),
     Country("Western Sahara", "EH", "ESH", "732", "Western Sahara"),
     Country("Yemen", "YE", "YEM", "887", "Yemen"),
+    Country("Yugoslavia", "YU", "YUG", "891", "Yugoslavia"), #transitional reservations
+    Country("Zaire", "ZR", "ZAR", "180", "Zaire"), #transitional reservations
     Country("Zambia", "ZM", "ZMB", "894", "Zambia"),
     Country("Zimbabwe", "ZW", "ZWE", "716", "Zimbabwe"),
 ]
