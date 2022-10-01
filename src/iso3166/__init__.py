@@ -17,7 +17,6 @@ class Country(NamedTuple):
     phone_code: str
     apolitical_name: str
 
-# Åland Islands
 _records = [
     Country("Afghanistan", "AF", "AFG", "004", "+93", "Afghanistan"),
     Country("Åland Islands", "AX", "ALA", "248", "+358 (AX)", "Åland Islands"),
