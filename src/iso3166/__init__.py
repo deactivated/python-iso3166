@@ -520,7 +520,6 @@ class _CountryLookup:
         else:
             k = key.upper()
             if len(k) >= 2 and k[0] == "+": 
-                print("cock")
                 r = _by_phone_code.get(k, default)
             elif len(k) == 2:
                 r = _by_alpha2.get(k, default)
