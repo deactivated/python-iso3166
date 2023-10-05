@@ -42,6 +42,10 @@ def test_alpha3() -> None:
     check_lookup("US", ["usa", "USA"], ["zzz"])
 
 
+def test_flag() -> None:
+    check_lookup("US", ["🇺🇸"], ["zzzz"])
+
+
 def test_name() -> None:
     check_lookup(
         "US",
@@ -82,3 +86,5 @@ def test_data() -> None:
 
         assert len(country.name) > 3
         assert len(country.apolitical_name) > 3
+
+        assert len(country.flag) == 2

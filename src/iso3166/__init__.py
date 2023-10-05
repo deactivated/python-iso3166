@@ -15,6 +15,7 @@ class Country(NamedTuple):
     alpha3: str
     numeric: str
     apolitical_name: str
+    flag: str = ""
 
 
 _records = [
@@ -449,6 +450,28 @@ _records = [
 ]
 
 
+def _get_flag_emoji(alpha2: str) -> str:
+    """Get the flag emoji for the provided country.
+
+    Args:
+        alpha2 (str): The two-letter ISO code for the country.
+
+    Returns:
+        A string containing the emoji.
+    """
+    assert len(alpha2) == 2
+
+    def _box(ch: str) -> str:
+        return chr(ord(ch) + 0x1F1A5)
+
+    return _box(alpha2[0]) + _box(alpha2[1])
+
+
+_records = [
+    r._replace(flag=_get_flag_emoji(r.alpha2)) for r in _records
+]
+
+
 def _build_index(idx: int) -> Dict[str, Country]:
     return dict((r[idx].upper(), r) for r in _records)
 
@@ -459,6 +482,7 @@ _by_alpha3 = _build_index(2)
 _by_numeric = _build_index(3)
 _by_name = _build_index(0)
 _by_apolitical_name = _build_index(4)
+_by_flag = _build_index(5)
 
 
 # Documented accessors for the country indexes
@@ -467,6 +491,7 @@ countries_by_alpha3 = _by_alpha3
 countries_by_numeric = _by_numeric
 countries_by_name = _by_name
 countries_by_apolitical_name = _by_apolitical_name
+countries_by_flag = _by_flag
 
 
 class NotFound:
@@ -490,8 +515,10 @@ class _CountryLookup:
             r = _by_numeric.get(k, default)
         else:
             k = key.upper()
-            if len(k) == 2:
+            if len(k) == 2 and k in _by_alpha2:
                 r = _by_alpha2.get(k, default)
+            elif len(k) == 2 and k in _by_flag:
+                r = _by_flag.get(k, default)
             elif len(k) == 3 and re.match(r"[0-9]{3}", k) and k != "000":
                 r = _by_numeric.get(k, default)
             elif len(k) == 3:
