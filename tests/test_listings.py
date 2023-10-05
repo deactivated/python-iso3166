@@ -38,3 +38,9 @@ def test_by_alpha3() -> None:
     table = iso3166.countries_by_alpha3
     assert len(table) >= len(iso3166.countries)
     assert table["AFG"].name == "Afghanistan"
+
+
+def test_by_flag() -> None:
+    table = iso3166.countries_by_flag
+    assert len(table) >= len(iso3166.countries)
+    assert table["🇦🇫"].name == "Afghanistan"
