@@ -262,7 +262,7 @@ _records = [
     Country("Mozambique", "MZ", "MOZ", "508", "Mozambique"),
     Country("Myanmar", "MM", "MMR", "104", "Myanmar"),
     Country("Namibia", "NA", "NAM", "516", "Namibia"),
-    Country("Nauru", "NR", "NRU", "520", "Nauru"),
+    Country("Naoero", "NR", "NRU", "520", "Naoero"),
     Country("Nepal", "NP", "NPL", "524", "Nepal"),
     Country("Netherlands", "NL", "NLD", "528", "Netherlands"),
     Country("New Caledonia", "NC", "NCL", "540", "New Caledonia"),
