@@ -457,7 +457,7 @@ _records = [
 
 
 def _build_index(idx: int) -> Dict[str, Country]:
-    return dict((r[idx].upper(), r) for r in _records)
+    return {r[idx].upper(): r for r in _records}
 
 
 # Internal country indexes
