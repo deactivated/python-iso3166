@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
-
 from typing import List, Union
+
 import pytest
+
 import iso3166
 from iso3166 import countries
 
