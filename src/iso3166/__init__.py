@@ -1,7 +1,16 @@
 # -*- coding: utf-8 -*-
 
 import re
-from typing import Dict, Iterator, NamedTuple, Type, TypeVar, Union, overload
+from typing import (
+    Dict,
+    Iterator,
+    NamedTuple,
+    Type,
+    TypeVar,
+    Union,
+    cast,
+    overload,
+)
 
 __all__ = ["countries"]
 
@@ -475,12 +484,10 @@ class NotFound:
 
 class _CountryLookup:
     @overload
-    def get(self, key: StrOrInt) -> Country:
-        ...
+    def get(self, key: StrOrInt) -> Country: ...
 
     @overload
-    def get(self, key: StrOrInt, default: _D) -> Union[Country, _D]:
-        ...
+    def get(self, key: StrOrInt, default: _D) -> Union[Country, _D]: ...
 
     def get(
         self, key: StrOrInt, default: Union[Type[NotFound], _D] = NotFound
@@ -501,10 +508,10 @@ class _CountryLookup:
             else:
                 r = _by_apolitical_name.get(k, default)
 
-        if r == NotFound:
+        if r is NotFound:
             raise KeyError(key)
 
-        return r
+        return cast(Union[Country, _D], r)
 
     __getitem__ = get
 
