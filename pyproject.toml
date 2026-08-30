@@ -61,3 +61,6 @@ dev = { requires-python = ">=3.12" }
 [tool.ruff]
 line-length = 79
 target-version = 'py37'
+
+[tool.ruff.lint]
+ignore = ["FA100"]
