@@ -1,7 +1,63 @@
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+[project]
+name = "iso3166"
+version = "3.0.0"
+authors = [
+  { name = "Mike Spindel", email = "mike@spindel.is" },
+]
+license = "MIT"
+license-files = ["LICENSE.txt"]
+keywords = ["iso 3166-1", "country codes"]
+description = "Self-contained ISO 3166-1 country definitions."
+readme = "README.rst"
+requires-python = ">=3.6"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+]
 
-[tool.black]
+[dependency-groups]
+dev = [
+  "mypy",
+  "pytest",
+  "tox",
+  "tox-uv-bare",
+]
+
+test-env = [
+  "mypy",
+  "pytest",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+exclude-newer = "5 days"
+
+[tool.uv.build-backend]
+source-exclude = ["*\\~"]
+source-include = [
+  "CHANGES",
+  "tests/**",
+]
+
+[tool.uv.dependency-groups]
+dev = { requires-python = ">=3.12" }
+
+[tool.ruff]
 line-length = 79
-target-version = ['py36', 'py37', 'py38', 'py39', 'py310', 'py311']
+target-version = 'py37'
