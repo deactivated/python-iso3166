@@ -1,6 +1,17 @@
 Changes
 =======
 
+3.0.0 - September 2, 2026
+-------------------------
+
+* Migrate build system to uv
+
+* Update test matrix for current versions of Python 3
+
+* Updated entries
+
+  - "Nauru" changed to "Naoero" (effective 2026-08-26)
+
 2.1.1 - July 11, 2022
 ---------------------
 
