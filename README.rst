@@ -15,7 +15,7 @@ between these codes and the corresponding country name.
 Installation
 ============
 
-::
+.. code-block:: console
 
   $ pip install iso3166
 
@@ -26,7 +26,7 @@ Usage
 Country details
 ---------------
 
-::
+.. code-block:: pycon
 
   >>> from iso3166 import countries
   >>>
@@ -41,7 +41,7 @@ Country details
 Country lists and indexes
 -------------------------
 
-::
+.. code-block:: pycon
 
   >>> from iso3166 import countries
 
@@ -52,7 +52,7 @@ Country lists and indexes
   Country(name='Albania', alpha2='AL', alpha3='ALB', numeric='008')
   Country(name='Algeria', alpha2='DZ', alpha3='DZA', numeric='012')
 
-::
+.. code-block:: pycon
 
   >>> import iso3166
 
